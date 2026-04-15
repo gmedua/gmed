@@ -220,7 +220,7 @@ async function updateUIForSession() {
         if (pdfBtn) pdfBtn.classList.add('hidden');
 
         // Кнопка адміна → "Вхід"
-        adminBtn.innerHTML = '<i class="fas fa-user-shield text-sm"></i> Вхід';
+        adminBtn.innerHTML = '<i class="fas fa-user-shield text-sm"></i> Адмін';
     }
 }
 
@@ -365,10 +365,8 @@ renderProducts(allProducts);
                     ` : ''}
                 </div>
                 <div class="mt-auto">
-                    ${isAdmin ? `
-    <div class="text-xl font-black text-slate-900 mb-3">${formatPrice(p, p.price_base)}</div>
-    <div class="space-y-1">${optHtml}</div>
-` : ''}
+                <div class="text-xl font-black text-slate-900 mb-3">${formatPrice(p, p.price_base)}</div>
+                <div class="space-y-1">${optHtml}</div>
 
                    <a href="#" 
    onclick="orderProduct('${p.name}')" 
